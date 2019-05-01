@@ -13,7 +13,7 @@ WORKDIR /home/app/micronaut-getting-started
 RUN ./mvnw package
 RUN native-image --no-server -cp target/micronaut-getting-started-*.jar
 
-FROM gcr.io/distroless/static
+FROM scratch
 EXPOSE 8080
 COPY --from=graalvm /home/app/micronaut-getting-started .
 ENTRYPOINT ["./micronaut-getting-started"]
