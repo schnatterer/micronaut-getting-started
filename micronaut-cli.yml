@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: micronaut.getting.started
+---
+testFramework: junit
+sourceLanguage: java
