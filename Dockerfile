@@ -16,4 +16,5 @@ RUN native-image --no-server -cp target/micronaut-getting-started-*.jar
 FROM scratch
 EXPOSE 8080
 COPY --from=graalvm /home/app/micronaut-getting-started .
+USER 1000
 ENTRYPOINT ["./micronaut-getting-started"]
